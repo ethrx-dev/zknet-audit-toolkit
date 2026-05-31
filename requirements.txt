@@ -1,0 +1,2 @@
+No external dependencies required. Uses Python standard library.
+Optional: install `npm` for dependency audit checks.
