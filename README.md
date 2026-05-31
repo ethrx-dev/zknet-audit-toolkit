@@ -1,22 +1,13 @@
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                ║
-║   ██╗  ██╗███╗   ██╗███████╗████████╗    █████╗ ██╗   ██╗██████╗ ██╗████████╗ ║
-║   ██║ ██╔╝████╗  ██║██╔════╝╚══██╔══╝   ██╔══██╗██║   ██║██╔══██╗██║╚══██╔══╝ ║
-║   █████╔╝ ██╔██╗ ██║█████╗     ██║      ███████║██║   ██║██║  ██║██║   ██║    ║
-║   ██╔═██╗ ██║╚██╗██║██╔══╝     ██║      ██╔══██║██║   ██║██║  ██║██║   ██║    ║
-║   ██║  ██╗██║ ╚████║███████╗   ██║      ██║  ██║╚██████╔╝██████╔╝██║   ██║    ║
-║   ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝      ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝    ║
-║                                                                                ║
-║   ████████╗ ██████╗  ██████╗ ██╗     ██╗  ██╗██╗████████╗                     ║
-║   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██║ ██╔╝██║╚══██╔══╝                     ║
-║      ██║   ██║   ██║██║   ██║██║     █████╔╝ ██║   ██║                        ║
-║      ██║   ██║   ██║██║   ██║██║     ██╔═██╗ ██║   ██║                        ║
-║      ██║   ╚██████╔╝╚██████╔╝███████╗██║  ██╗██║   ██║                        ║
-║      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝                        ║
-║                                                                                ║
-║                    Automated Security Audit & Remediation                       ║
-║                    for vibe-coded applications in production                    ║
-║                                                                                ║
+║                                                                                  ║
+║                      +-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+                     ║
+║                      |         ZKNET AUDIT TOOLKIT         |                     ║
+║                      +-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+                     ║
+║                                                                                  ║
+║                      Automated Security Audit & Remediation                      ║
+║                    for vibe-coded applications in production                     ║
+║                        Built for the ZKNetwork ecosystem                         ║
+║                                                                                  ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   ┌──────────────────────────────────────────────────────────────────────────┐
@@ -34,24 +25,24 @@
 ║                                    QUICK START                                   ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
-  ┌──────────────────────────────────────────────────────────────────────────┐
-  │  $ git clone https://github.com/ethrx-dev/zknet-audit-toolkit.git       │
-  │  $ cd zknet-audit-toolkit                                               │
-  │  $ ln -sf "$PWD/run-audit" ~/.local/bin/zknet-audit                     │
-  │                                                                          │
-  │  # Scan anything                                                        │
-  │  $ zknet-audit /path/to/project -o ./reports                            │
-  │                                                                          │
-  │  # Preview fixes (dry-run — no files touched)                            │
-  │  $ zknet-audit fix ./reports/audit-results.json /path/to/project --dry-run│
-  │                                                                          │
-  │  # Apply fixes                                                           │
-  │  $ zknet-audit fix ./reports/audit-results.json /path/to/project         │
-  └──────────────────────────────────────────────────────────────────────────┘
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │  $ git clone https://github.com/ethrx-dev/zknet-audit-toolkit.git          │
+  │  $ cd zknet-audit-toolkit                                                  │
+  │  $ ln -sf "$PWD/run-audit" ~/.local/bin/zknet-audit                        │
+  │                                                                            │
+  │  # Scan anything                                                           │
+  │  $ zknet-audit /path/to/project -o ./reports                               │
+  │                                                                            │
+  │  # Preview fixes (dry-run — no files touched)                              │
+  │  $ zknet-audit fix ./reports/audit-results.json /path/to/project --dry-run │
+  │                                                                            │
+  │  # Apply fixes                                                             │
+  │  $ zknet-audit fix ./reports/audit-results.json /path/to/project           │
+  └────────────────────────────────────────────────────────────────────────────┘
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                               17 SECURITY CHECKS                                ║
+║                               17 SECURITY CHECKS                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   ┌─────┬──────────────────────────────────┬───────────┬────────────────────────┐
@@ -59,59 +50,59 @@
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  1  │  Exposed Secrets                 │ CRITICAL  │  .env in git, hard-    │
   │     │                                  │           │  coded keys, .env.ex-  │
-  │     │                                  │           │  ample with real vals   │
+  │     │                                  │           │  ample with real vals  │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  2  │  Database Access Control         │ LOW       │  Supabase RLS, Firebase│
-  │     │                                  │           │  rules bypassed         │
+  │     │                                  │           │  rules bypassed        │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  3  │  Auth Middleware                 │ CRITICAL  │  Missing auth guards   │
-  │     │                                  │           │  on API routes          │
+  │     │                                  │           │  on API routes         │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  4  │  Access Control (IDOR)           │ LOW       │  Missing ownership     │
-  │     │                                  │           │  checks on user data    │
+  │     │                                  │           │  checks on user data   │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  5  │  Frontend Secrets                │ LOW       │  NEXT_PUBLIC_ / VITE_  │
-  │     │                                  │           │  env vars with secrets  │
+  │     │                                  │           │  env vars with secrets │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  6  │  SSRF                            │ HIGH      │  URL fetching without  │
-  │     │                                  │           │  private-IP validation  │
+  │     │                                  │           │  private-IP validation │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  7  │  CSRF                            │ HIGH      │  Missing SameSite or   │
-  │     │                                  │           │  CSRF tokens on cookies │
+  │     │                                  │           │  CSRF tokens on cookies│
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  8  │  Security Headers                │ MEDIUM    │  CSP, HSTS, XFO,       │
-  │     │                                  │           │  XCTO, Referrer-Policy  │
+  │     │                                  │           │  XCTO, Referrer-Policy │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │  9  │  CORS                            │ LOW       │  Wildcard ACAO,        │
-  │     │                                  │           │  creds + wildcard       │
+  │     │                                  │           │  creds + wildcard      │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 10  │  Rate Limiting                   │ HIGH      │  No limits on auth     │
-  │     │                                  │           │  endpoints              │
+  │     │                                  │           │  endpoints             │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 11  │  SQL Injection                   │ HIGH      │  f-string SQL, string  │
-  │     │                                  │           │  concat in execute()    │
+  │     │                                  │           │  concat in execute()   │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 12  │  XSS                             │ HIGH      │  dangerouslySetInner-  │
-  │     │                                  │           │  HTML, v-html, innerHTML│
+  │     │                                  │           │ HTML, v-html, innerHTML│
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 13  │  Payment Webhooks                │ LOW       │  Missing Stripe sig    │
-  │     │                                  │           │  verification           │
+  │     │                                  │           │  verification          │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 14  │  File Uploads                    │ MEDIUM    │  No magic-byte check,  │
-  │     │                                  │           │  no UUID rename         │
+  │     │                                  │           │  no UUID rename        │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 15  │  Error Handling                  │ MEDIUM    │  Stack traces exposed, │
-  │     │                                  │           │  debug mode in prod     │
+  │     │                                  │           │  debug mode in prod    │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 16  │  Password Hashing                │ LOW       │  MD5/SHA1 for pwds     │
   ├─────┼──────────────────────────────────┼───────────┼────────────────────────┤
   │ 17  │  Dependencies                    │ MEDIUM    │  Unpinned ^/~ versions,│
-  │     │                                  │           │  no lockfile, vulns     │
+  │     │                                  │           │  no lockfile, vulns    │
   └─────┴──────────────────────────────────┴───────────┴────────────────────────┘
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                            AUTOMATED FIX MODULES                                ║
+║                            AUTOMATED FIX MODULES                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   When a check fails, zknet-audit fix applies targeted remediation:
@@ -149,20 +140,20 @@
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                              OUTPUT REPORTS                                     ║
+║                              OUTPUT REPORTS                                      ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   ┌──────────────────────────────────────────────────────────────────────────┐
   │  $ tree ./reports/                                                       │
   │  ├── AUDIT_SUMMARY.md     ← Human-readable markdown                      │
-  │  ├── audit-results.json   ← Machine-readable JSON (feeds fix tool)      │
+  │  ├── audit-results.json   ← Machine-readable JSON (feeds fix tool)       │
   │  ├── FIX_REPORT.md        ← Post-fix summary                             │
   │  └── fix-results.json     ← Machine-readable fix log                     │
   └──────────────────────────────────────────────────────────────────────────┘
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                                  ARCHITECTURE                                   ║
+║                                  ARCHITECTURE                                    ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   ┌──────────────────────────────────────────────────────────────────────────┐
@@ -172,10 +163,10 @@
   │  ├── scanner.py             ← Centralized file iterator                  │
   │  ├── checks/                ← 17 check modules                           │
   │  │   ├── secrets.py         │  database.py      │  auth_middleware.py    │
-  │  │   ├── idor.py            │  frontend_secrets│  ssrf.py               │
-  │  │   ├── csrf.py            │  headers.py       │  cors.py              │
-  │  │   ├── rate_limiting.py   │  sqli.py          │  xss.py               │
-  │  │   ├── webhooks.py        │  file_upload.py   │  errors.py            │
+  │  │   ├── idor.py            │  frontend_secrets │  ssrf.py               │
+  │  │   ├── csrf.py            │  headers.py       │  cors.py               │
+  │  │   ├── rate_limiting.py   │  sqli.py          │  xss.py                │
+  │  │   ├── webhooks.py        │  file_upload.py   │  errors.py             │
   │  │   ├── passwords.py       │  dependencies.py                           │
   │  ├── fixes/                 ← 11 fix modules + framework detector        │
   │  │   ├── fixer.py           ← Orchestrator                               │
@@ -192,7 +183,7 @@
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                                    ROADMAP                                      ║
+║                                    ROADMAP                                       ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   ┌──────────────────────────────────────────────────────────────────────────┐
@@ -200,14 +191,14 @@
   │  ☐ Terraform / IaC scanning                                              │
   │  ☐ SBOM generation (CycloneDX)                                           │
   │  ☐ GitHub Actions CI/CD integration                                      │
-  │  ☐ Pre-commit hook                                                        │
+  │  ☐ Pre-commit hook                                                       │
   │  ☐ VS Code extension                                                     │
   │  ☐ Web UI dashboard                                                      │
   └──────────────────────────────────────────────────────────────────────────┘
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════╗
-║                                    LICENSE                                      ║
+║                                    LICENSE                                       ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 
   MIT — ZKNetwork / ethrx-dev
