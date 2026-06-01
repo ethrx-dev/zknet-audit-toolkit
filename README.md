@@ -108,25 +108,13 @@ zknet-audit-toolkit/
 └── README.md              You are here
 ```
 
----
 
-## Roadmap
-
-- Container security (Dockerfile, pod specs)
-- Terraform / IaC scanning
-- SBOM generation (CycloneDX)
-- GitHub Actions CI/CD integration
-- Pre-commit hook
-- VS Code extension
-- Web UI dashboard
 
 ---
 
-## License
+## Closing note: 
 
-MIT — ZKNetwork / ethrx-dev
-
-Built for the ZKNet ecosystem. Use it, fork it, secure it.
+Built for the ZKNet ecosystem
 
 ---
 
