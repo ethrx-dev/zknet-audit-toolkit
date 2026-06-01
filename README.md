@@ -1,4 +1,4 @@
-# ZKNET Audit Toolkit
+# ZKNET Audit Toolkit v1
 
 Automated security audit and remediation for vibe-coded applications in production. Probes codebases for 17 vulnerability categories, then applies targeted fixes.
 
