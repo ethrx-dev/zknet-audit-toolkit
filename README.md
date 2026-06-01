@@ -126,7 +126,7 @@ zknet-audit-toolkit/
 
 MIT — ZKNetwork / ethrx-dev
 
-Built for the ZKNet ecosystem. Use it, fork it, Secure it.
+Built for the ZKNet ecosystem. Use it, fork it, secure it.
 
 ---
 
